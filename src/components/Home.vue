@@ -6,7 +6,7 @@
     <br>
     <h5><router-link to="/lesson/2" class="waves-effect waves-light btn bg-color1"><i class="material-icons right">keyboard_arrow_right</i>Partie 2 - Intéractions avec l'objet</router-link></h5>
     <br>
-    <h5><router-link to="/questionnaire" class="waves-effect waves-light btn bg-color1"><i class="material-icons right">keyboard_arrow_right</i>QCM</router-link></h5>
+    <h5><router-link to="/questionnaire" class="waves-effect waves-light btn bg-color1"><i class="material-icons right">keyboard_arrow_right</i>Questionnaire</router-link></h5>
     <br>
 
     <hr class="small">
