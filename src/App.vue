@@ -1,60 +1,99 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <router-link to="/"><img src="./assets/logo.png" alt="logo" name="logo" class="logo"></router-link>
+    <hr>
+    <router-view></router-view>
+
+    <footer>Crée par <a target="_blank" href="https://mattieuvendeville.fr/">Mattieu VENDEVILLE</a> pour l'École Multimédia</footer>
   </div>
 </template>
 
 <script>
+
+import Vue from "vue"
+import Materials from "vue-materials"
+Vue.use(Materials)
+
+import Home from './components/Home';
+
+
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'app'
 }
 </script>
 
 <style>
+/* ****** APP ****** */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
-h1, h2 {
+/* ****** HEADER ****** */
+.logo{
+  max-width: 200px;
+}
+
+/* ****** FOOTER ****** */
+footer{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+/* ****** ****** APP GLOBAL CLASSES ****** ****** */
+.small{
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+
+}
+
+.btn{
   font-weight: normal;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+/* ****** FONT STYLE ****** */
+.italic {
+  font-style: italic;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+.bold {
+  font-weight: bold;
 }
 
-a {
-  color: #42b983;
+/* ****** COLORS ****** */
+footer a, .color1 {
+  color: #355C7D;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #6C5B7B;
+}
+
+.color2 {
+  color: #F67280;
+}
+
+.bg-color1 {
+  background-color: #355C7D;
+}
+
+.bg-color1:hover {
+  background-color: #6C5B7B;
+}
+
+.bg-color2 {
+  background-color: #F67280;
+}
+
+.bg-color2:hover {
+  background-color: #C06C84;
 }
 </style>
